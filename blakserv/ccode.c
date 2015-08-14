@@ -3754,7 +3754,10 @@ int C_MinigameStringToNumber(int object_id,local_var_type *local_vars,
 int C_RecordStat(int object_id,local_var_type *local_vars,
 				int num_normal_parms,parm_node normal_parm_array[],
 				int num_name_parms,parm_node name_parm_array[])
-{	
+{
+
+#ifdef BLAK_PLATFORM_WINDOWS
+
 	val_type stat_type, stat1, stat2, stat3, stat4, stat5, stat6, stat7;
 	resource_node *r_who_damaged, *r_who_attacker, *r_weapon;
 
@@ -3865,6 +3868,8 @@ int C_RecordStat(int object_id,local_var_type *local_vars,
 			bprintf("ERROR: Unknown stat_type (%d) in C_RecordStat",stat_type.v.data);
 			break;
 	}
+
+#endif
 
 	return NIL;
 }
