@@ -24,10 +24,10 @@ typedef struct _SECURITY_ATTRIBUTES {
   BOOL   bInheritHandle;
 } SECURITY_ATTRIBUTES, *PSECURITY_ATTRIBUTES, *LPSECURITY_ATTRIBUTES;
 
-BOOL PostThreadMessage(DWORD  idThread, UINT Msg, WPARAM wParam, LPARAM lParam);
+BOOL PostThreadMessage(DWORD idThread, UINT Msg, WPARAM wParam, LPARAM lParam);
 BOOL PeekMessage(LPMSG lpMsg, HWND hWnd, UINT wMsgFilterMin, UINT wMsgFilterMax, UINT wRemoveMsg);
-DWORD WaitForSingleObject(HANDLE hHandle, DWORD  dwMilliseconds);
-DWORD WaitForMultipleObjects(DWORD  nCount, const HANDLE *lpHandles, BOOL bWaitAll, DWORD  dwMilliseconds);
+DWORD WaitForSingleObject(HANDLE hHandle, DWORD dwMilliseconds);
+DWORD WaitForMultipleObjects(DWORD nCount, const HANDLE *lpHandles, BOOL bWaitAll, DWORD dwMilliseconds);
 DWORD MsgWaitForMultipleObjects( DWORD nCount, const HANDLE *pHandles, BOOL bWaitAll, DWORD dwMilliseconds, DWORD dwWakeMask);
 HANDLE CreateMutex(LPSECURITY_ATTRIBUTES lpMutexAttributes, BOOL bInitialOwner, LPCTSTR lpName);
 BOOL ReleaseMutex(HANDLE hMutex);

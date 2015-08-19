@@ -18,7 +18,7 @@
 #include "blakserv.h"
 
 
-#ifdef BLAK_PLATFROM_WINDOWS
+#ifdef BLAK_PLATFORM_WINDOWS
 HANDLE muxServer;
 #else
 CRITICAL_SECTION muxServer;

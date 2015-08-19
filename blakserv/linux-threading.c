@@ -5,7 +5,7 @@
 * threading-linux.c
 *
 
-  This module contains threading and mutex wrappera functions to handle
+  This module contains threading and mutex wrapper functions to handle
      certain windows calls on a linux platform.
 
 */

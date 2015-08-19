@@ -40,7 +40,7 @@ typedef struct SlopeInfo
    float D;
 } SlopeInfo;
 
-typedef struct Sector
+typedef struct SectorInfo
 {
    unsigned short ServerID;
    unsigned short FloorTexture;
@@ -52,7 +52,7 @@ typedef struct Sector
    SlopeInfo*     SlopeInfoCeiling;
    unsigned short FloorTextureOrig;
    unsigned short CeilingTextureOrig;
-} Sector;
+} SectorInfo;
 
 typedef struct Wall
 {
@@ -64,8 +64,8 @@ typedef struct Wall
    V2             P2;
    unsigned short RightSectorNum;
    unsigned short LeftSectorNum;
-   Sector*        RightSector;
-   Sector*        LeftSector;
+   SectorInfo*    RightSector;
+   SectorInfo*    LeftSector;
    Side*          RightSide;
    Side*          LeftSide;
    Wall*          NextWallInPlane;
@@ -96,7 +96,7 @@ typedef struct BspLeaf
    unsigned short PointsCount;
    V3*            PointsFloor;
    V3*            PointsCeiling;
-   Sector*        Sector;
+   SectorInfo*    Sector;
 } BspLeaf;
 
 typedef struct BspNode
@@ -142,7 +142,7 @@ typedef struct
    unsigned short WallsCount;
    Side*          Sides;
    unsigned short SidesCount;
-   Sector*        Sectors;
+   SectorInfo*    Sectors;
    unsigned short SectorsCount;
 } room_type;
 
